@@ -15,12 +15,11 @@ import java.lang.reflect.Constructor;
 public class MainActivity extends AppCompatActivity implements View.OnTouchListener{
 
     private TextView txvOutput;
-    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        txvOutput = (TextView) findViewById(R.id.activity_main);
+        txvOutput = (TextView) findViewById(R.id.txvOutput);
         txvOutput.setTextSize(25);
         ConstraintLayout layout= (ConstraintLayout) findViewById(R.id.activity_main);
         layout.setOnTouchListener(this);
@@ -39,10 +38,12 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
                 txvOutput.setTextColor(Color.GREEN);
                 break;
             case MotionEvent.ACTION_MOVE:
-                txvOutput.setText(("ACTION_MOVE"));
+                float x = event.getX();
+                float y = event.getY();
+                txvOutput.setText("X = " + x + "\nY = " + y);
                 txvOutput.setTextColor(Color.BLUE);
                 break;
         }
-        return  true;
+        return true;
     }
 }
