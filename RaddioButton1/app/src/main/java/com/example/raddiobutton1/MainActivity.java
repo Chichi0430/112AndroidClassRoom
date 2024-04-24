@@ -35,11 +35,11 @@ public class MainActivity extends AppCompatActivity {
                         break;
                 }*/
                 if (type.getCheckedRadioButtonId() == R.id.rdbAdult)
-                    outputStr += "全票\n";
+                    outputStr += "全票$500\n";
                 else if (type.getCheckedRadioButtonId() == R.id.rdbChild)
-                    outputStr += "兒童票\n";
+                    outputStr += "兒童票$250\n";
                 else
-                    outputStr += "學生票\n";
+                    outputStr += "學生票$400\n";
 
                 TextView output = (TextView) findViewById(R.id.lblOutput);
                 output.setText(outputStr);

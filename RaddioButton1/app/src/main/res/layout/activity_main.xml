@@ -53,21 +53,21 @@
 
         <RadioButton
             android:id="@+id/rdbAdult"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="全票" />
+            android:text="全票$500" />
 
         <RadioButton
             android:id="@+id/rdbChild"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="兒童票" />
+            android:text="兒童票$250" />
 
         <RadioButton
             android:id="@+id/rdbStudent"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="學生票" />
+            android:text="學生票$400" />
     </RadioGroup>
 
     <Button
