@@ -37,10 +37,10 @@ public class MainActivity extends AppCompatActivity {
                 ArrayAdapter<String> tempAd =
                         new ArrayAdapter<>(MainActivity.this,
                                 android.R.layout.simple_spinner_item,
-                                tempSer);
+                                tempSet);
                 tempAd.setDropDownViewResource(
-                        android.R.layout.simple_spinner_item,
-                );
+                        android.R.layout.simple_spinner_dropdown_item);
+                temp.setAdapter(tempAd);
             }
 
             @Override
