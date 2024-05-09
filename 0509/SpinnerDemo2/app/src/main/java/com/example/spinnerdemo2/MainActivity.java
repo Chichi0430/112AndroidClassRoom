@@ -46,6 +46,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 r = v1 * v2;
                 break;
             case 3:
+                if (v2 == 0){
+                    throw new ArithmeticException();
+            }
                 r = (double) v1 / v2;
                 break;
         }
@@ -55,7 +58,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         return;
     }catch(ArithmeticException e){
         output.setText("除數不可為0");
-        return;}
+        return;
+        }
     }
 
     @Override
