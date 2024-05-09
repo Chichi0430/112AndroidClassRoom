@@ -28,11 +28,11 @@ public class MainActivity extends AppCompatActivity {
         drink.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                String[] tempSer;
+                String[] tempSet;
                 if(position == 3)
-                    tempSer = tempSet2;
+                    tempSet = tempSet2;
                 else
-                    tempSer = tempSet1;
+                    tempSet = tempSet1;
 
                 ArrayAdapter<String> tempAd =
                         new ArrayAdapter<>(MainActivity.this,
