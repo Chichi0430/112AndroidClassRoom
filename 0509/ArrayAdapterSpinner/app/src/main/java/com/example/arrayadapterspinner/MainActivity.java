@@ -7,6 +7,8 @@ import android.text.Layout;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -14,8 +16,8 @@ public class MainActivity extends AppCompatActivity {
 
     private Spinner drink, temp;
     private TextView txv;
-    private String[] tempSet1 = {"冰" ,"去冰","溫"};
-    private String[] tempSet2 ={"冰","去冰"};
+    private String[] tempSet1 = {"冰" ,"去冰","溫"}; // 一種溫度
+    private String[] tempSet2 ={"冰","去冰"};// 兩種溫度
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,15 +39,23 @@ public class MainActivity extends AppCompatActivity {
                 ArrayAdapter<String> tempAd =
                         new ArrayAdapter<>(MainActivity.this,
                                 android.R.layout.simple_spinner_item,
-                                tempSet);
-                tempAd.setDropDownViewResource(
+                                tempSet);  // 溫度選項
+                tempAd.setDropDownViewResource(  //設定下拉選單的選像樣式
                         android.R.layout.simple_spinner_dropdown_item);
-                temp.setAdapter(tempAd);
+                temp.setAdapter(tempAd); //設定使用Adopter 物件
             }
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
 
+            }
+        });
+        Button order = (Button) findViewById(R.id.btnOrder);
+        order.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                txv.setText(("飲料為: " + drink.getSelectedItem().toString()) +
+                        "\n冰塊為: " + temp.getSelectedItem().toString());
             }
         });
     }
