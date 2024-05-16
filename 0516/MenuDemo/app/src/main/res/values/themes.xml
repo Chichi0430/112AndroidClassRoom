@@ -18,5 +18,5 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
-    <style name="Theme.MenuDemo" parent="Base.Theme.MenuDemo" />
+    <style name="Theme.MenuDemo" parent="Theme.Action" />
 </resources>
