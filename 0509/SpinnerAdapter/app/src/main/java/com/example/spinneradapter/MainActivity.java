@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         spDesserts = (Spinner) findViewById(R.id.spinner2);
 
         ArrayAdapter<String> adpCourese = new ArrayAdapter<>(this,
-                android.R.layout.simple_spinner_item, courses);
+                android.R.layout.simple_spinner_dropdown_item, courses);
         ArrayAdapter<String> adpDesserts = new ArrayAdapter<>(this,
                 android.R.layout.simple_spinner_dropdown_item, desserts);
 
