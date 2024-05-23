@@ -25,7 +25,7 @@ public class OpActivity extends AppCompatActivity {
                 RadioButton rdbAdd, rdbSubtract, rdbMultiply, rdbDivide;
                 CheckBox chkDivide;
 // 取得傳遞的資料
-                Bundle bundle = this.getIntent().getExtras();
+                Bundle bundle = OpActivity.this.getIntent().getExtras();
                 if (bundle == null) return;
 // 取得運算元
                 opd1 = Integer.parseInt(bundle.getString("OPERAND01"));
